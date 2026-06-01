@@ -269,7 +269,17 @@
     fixedContentPos: false
   });
 
+$('.navbar-nav a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+    $('.js-fh5co-nav-toggle').removeClass('active');
+});
 
+$(document).on('click', function (e) {
+    if ($(e.target).closest('.navbar').length === 0) {
+        $('.navbar-collapse').collapse('hide');
+        $('.js-fh5co-nav-toggle').removeClass('active');
+    }
+});
 
 
 
